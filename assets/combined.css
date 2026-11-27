@@ -189,7 +189,21 @@ th,td { border-bottom-color:var(--line); padding:9px 11px; }
 .original-lecture math.math-linear mo { margin:0 .12em; }
 .original-lecture math.math-linear mtext,
 .original-lecture math.math-linear mi { word-break:keep-all; }
-.original-lecture .formula-inline { font-family:var(--jp); line-height:1.9; word-break:keep-all; }
+.original-lecture .formula-inline {
+  display:flex; flex-wrap:wrap; align-items:flex-start; gap:.35em .55em;
+  margin:.7em 0; font-family:var(--jp); line-height:1.6; word-break:keep-all;
+}
+.original-lecture .formula-part {
+  display:inline-flex; flex-direction:column; align-items:center;
+  max-width:100%; min-width:0;
+}
+.original-lecture .formula-word { white-space:nowrap; }
+.original-lecture .formula-label {
+  margin-top:.18em; padding-top:.12em; border-top:1px solid var(--line-strong);
+  font-size:.72em; line-height:1.4; color:var(--muted);
+  text-align:center; white-space:normal;
+}
+.original-lecture .formula-op { align-self:flex-start; margin:.12em 0 0; }
 .source-question { margin:.7rem 0; border:1px solid var(--line); border-radius:3px; background:var(--white); padding:16px; }
 .lesson-exercises .source-question { border:1px solid var(--line); padding:16px; }
 .source-question > :is(p:first-child,.exercise-prompt) { color:var(--ink); font-weight:600; margin-bottom:.5rem; }
