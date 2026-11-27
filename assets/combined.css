@@ -179,6 +179,17 @@ th,td { border-bottom-color:var(--line); padding:9px 11px; }
 .reference-caption { color:#54677d; }
 .original-lecture math[display="block"] { display:block; max-width:100%; overflow-x:auto; overflow-y:hidden; }
 .original-lecture p:has(math) { max-width:100%; overflow-x:auto; overscroll-behavior-x:contain; }
+
+/* 线性数式按行内文本排版，空间不足时自然换行，避免横向滚动条 */
+.original-lecture math.math-linear,
+.original-lecture math.math-linear mrow,
+.original-lecture math.math-linear mtext,
+.original-lecture math.math-linear mo,
+.original-lecture math.math-linear mi { display:inline; }
+.original-lecture math.math-linear mo { margin:0 .12em; }
+.original-lecture math.math-linear mtext,
+.original-lecture math.math-linear mi { word-break:keep-all; }
+.original-lecture .formula-inline { font-family:var(--jp); line-height:1.9; word-break:keep-all; }
 .source-question { margin:.7rem 0; border:1px solid var(--line); border-radius:3px; background:var(--white); padding:16px; }
 .lesson-exercises .source-question { border:1px solid var(--line); padding:16px; }
 .source-question > :is(p:first-child,.exercise-prompt) { color:var(--ink); font-weight:600; margin-bottom:.5rem; }
