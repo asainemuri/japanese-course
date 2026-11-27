@@ -143,6 +143,10 @@ footer > div { min-height:62px; }
 .original-lecture blockquote p[lang="ja"], .original-lecture .study-example > blockquote > p[lang="ja"] {
   font:450 1.04em/1.82 var(--jp); color:#162b49; }
 .original-lecture .study-example > p { display:inline; margin-inline-start:.85em; font-size:.94em; color:#4c5c70; }
+/* ①②③ 列举型例句：每个例句与对应说明各占一行 */
+.original-lecture .study-example > blockquote.example-list,
+.original-lecture .study-example > blockquote.example-list > p { display:block; }
+.original-lecture .study-example > blockquote.example-list + p { display:block; margin:.35em 0 0; }
 .original-lecture [lang|="zh"] { font-family:var(--reading-zh); }
 .original-lecture > .study-example:not(.long-example) { display:block; }
 .original-lecture .study-example.long-example > p { display:block; margin:.2em 0 0; }
