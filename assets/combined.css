@@ -186,11 +186,13 @@ th,td { border-bottom-color:var(--line); padding:9px 11px; }
 
 /* 线性数式按行内文本排版，空间不足时自然换行，避免横向滚动条 */
 .original-lecture math.math-linear,
+.original-lecture math.math-linear semantics,
 .original-lecture math.math-linear mrow,
 .original-lecture math.math-linear mtext,
 .original-lecture math.math-linear mo,
 .original-lecture math.math-linear mi { display:inline; }
 .original-lecture math.math-linear mo { margin:0 .12em; }
+.original-lecture math.math-tight { white-space:nowrap; }
 .original-lecture math.math-linear mtext,
 .original-lecture math.math-linear mi { word-break:keep-all; }
 .original-lecture .formula-inline {
