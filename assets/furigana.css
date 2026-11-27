@@ -1,0 +1,36 @@
+.mast .furigana-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 36px;
+  padding: 5px 10px;
+  border: 1px solid #becce1;
+  border-radius: 5px;
+  background: var(--white);
+  color: #354861;
+  font: 500 13px/1.5 var(--ui);
+  white-space: nowrap;
+  cursor: pointer;
+}
+.mast .furigana-toggle[aria-pressed="true"] {
+  border-color: #a9bee9;
+  background: var(--blue-light);
+  color: var(--blue-deep);
+}
+.mast .furigana-toggle:hover { border-color: var(--blue); }
+.course-ruby { ruby-position: over; ruby-align: center; }
+.course-ruby > rt {
+  color: #53657f;
+  font-size: .52em;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1;
+  text-decoration: none;
+  user-select: none;
+}
+html[data-furigana="off"] .course-ruby { display: inline; }
+html[data-furigana="off"] .course-ruby > rt { display: none; }
+@media print {
+  .furigana-toggle { display: none !important; }
+  .course-ruby > rt { color: #444; }
+}

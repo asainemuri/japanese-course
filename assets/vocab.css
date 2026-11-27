@@ -1,0 +1,7 @@
+.collocations { color: var(--muted); font-size: .9rem; margin-top: .15rem; }
+.book-unit > p { margin: .2rem 0 .7rem; color: var(--muted); }
+.vocab-subtitle { font-size: 1.05rem; }
+.original-outline { white-space: pre-wrap; overflow-wrap: anywhere; tab-size: 3; }
+.original-lecture > .answer-sheet { padding: .8rem 0; border-top: 1px solid var(--line); }
+.original-lecture > .answer-sheet > summary { cursor: pointer; color: var(--teal); font-weight: 600; }
+.original-lecture .source-svg { margin: 1rem auto; }
